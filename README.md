@@ -1,7 +1,7 @@
 # API_Librairie_FLASK2
 
 ## Getting Started
-
+Cet api permet de gérer une bibliothèque en listant les livres et les catégories
 ### Installation des Dépendances
 
 #### Python 3.10.2
