@@ -1,6 +1,6 @@
 # API_Librairie_FLASK2
 
-## Getting Started
+## Commencer
 Cet api permet de gérer une bibliothèque en listant les livres et les catégories
 ### Installation des Dépendances
 
@@ -48,7 +48,7 @@ flask run
 
 Getting starter
 
-Base URL: At present this app can only be run locally and is not hosted as a base URL. The backend app is hosted at the default, http://localhost:5000; which is set as a proxy in frontend configuration.
+URL de base : à l’heure actuelle, cette application ne peut être exécutée que localement et n’est pas hébergée en tant qu’URL de base. L’application backend est hébergée par défaut, http://localhost:5000 ; qui est défini comme proxy dans la configuration frontale.
 
 ## Type d'erreur
 Les erreurs sont renvoyées sous forme d'objet au format Json:
