@@ -14,9 +14,7 @@ Suivez les instructions suivantes pour installer l'ancienne version de python su
 Pour installer les dépendances, ouvrez le dossier `/Documentation` et exécuter la commande suivante:
 
 ```bash ou powershell ou cmd
-pip install -r requirements.txt
-or
-pip3 install -r requirements.txt
+pip freeze > requirements.txt
 ```
 
 Nous passons donc à l'installation de tous les packages se trouvant dans le fichier `requirements.txt`.
