@@ -66,7 +66,7 @@ class Livre(db.Model):
     date_publication = db.Column(db.Date, nullable=False)
     auteur = db.Column(db.String(150), nullable=False)
     editeur = db.Column(db.String(150), nullable=False)
-    categorie_id = db.Column(db.Integer,db.ForeignKey('categories.categorie_id'))
+    categorie_id = db.Column(db.Integer,db.ForeignKey('categories.categorie_id'),nullable=False)
 
 
     def __init__(self,isbn,titre, date_publication,auteur,editeur,categorie_id):
