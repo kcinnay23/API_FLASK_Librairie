@@ -21,7 +21,7 @@ motdepasse=("motdepasse")
 
 motdepasse = quote_plus(os.getenv('pswd_db'))
 
-app.config['SQLALCHEMY_DATABASE_URI']="postgresql://postgres:{}@localhost:5432/Biblio".format(motdepasse)
+app.config['SQLALCHEMY_DATABASE_URI']="postgresql://lgmpaftdpwbrvh:33b36795a319306eba85be84d2ae25b7aeb4ec715ffb69acbd5d77111c809aff@ec2-3-228-222-169.compute-1.amazonaws.com:5432/ddob4e4f080tee"
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db=SQLAlchemy(app)
