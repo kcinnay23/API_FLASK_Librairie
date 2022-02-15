@@ -7,12 +7,14 @@ from flask import Flask,jsonify, request, abort
 from sqlalchemy.orm import relationship
 from flask_migrate import Migrate
 from dotenv import load_dotenv
+from requests import get
 load_dotenv()
 
 database = 'Biblio'
 password = 'motdepasse'
 ###db_path ='postgresql://{}:{}@{}/
-# {}'.format('postgres','root','localhost:5432','Biblio')
+
+# {}'.format('postgres','mp','localhost:5432','Biblio')
 
 app = Flask(__name__)
 motdepasse=("motdepasse")
