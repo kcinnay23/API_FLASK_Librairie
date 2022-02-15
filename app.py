@@ -1,17 +1,23 @@
+import os
 from turtle import back
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import ForeignKey
+from urllib.parse import quote_plus
 from flask import Flask,jsonify, request, abort
 from sqlalchemy.orm import relationship
 from flask_migrate import Migrate
+from dotenv import load_dotenv
+load_dotenv()
 
 database = 'Biblio'
-password = 'root'
+password = 'motdepasse'
 ###db_path ='postgresql://{}:{}@{}/
 # {}'.format('postgres','root','localhost:5432','Biblio')
 
 app = Flask(__name__)
-motdepasse=("root")
+motdepasse=("motdepasse")
+
+motdepasse = quote_plus(os.getenv('pswd_db'))
 
 app.config['SQLALCHEMY_DATABASE_URI']="postgresql://postgres:{}@localhost:5432/Biblio".format(motdepasse)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
@@ -262,7 +268,6 @@ def change_name(id):
         return jsonify({
             'success modify' : True,
             'category':category.format()
-            
             })
     except:
         abort(404)
