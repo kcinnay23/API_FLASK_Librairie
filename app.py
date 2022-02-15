@@ -26,7 +26,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db=SQLAlchemy(app)
 
-migrate=Migrate(app)
+migrate=Migrate(app,db)
 
 @app.after_request
 def after_request(response):
