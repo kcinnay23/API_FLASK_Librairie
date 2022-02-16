@@ -1,5 +1,5 @@
 from models import Livre,Categorie,setup_db, db
-from flask import Flask,jsonify, request, abort
+from flask import Flask,jsonify, request, abort,send_from_directory
 from flask_cors import CORS
 from flask_migrate import Migrate
 from dotenv import load_dotenv
@@ -26,6 +26,9 @@ def create_app(test_config=None):
         response.headers.add('Access-Control-Allow-Methods','GET,PATCH,POST,DELETE,OPTIONS')
         return response
 
+    @app.route('/static/<path:path>')
+    def get_docs(path):
+        return send_from_directory('static',path)
 
     ##############################
     # Lister tous les livres +
