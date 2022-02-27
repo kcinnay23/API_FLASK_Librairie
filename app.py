@@ -13,8 +13,8 @@ app = Flask(__name__)
 motdepasse=("motdepasse")
 
 motdepasse = quote_plus(os.getenv('pswd_db'))
-#app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://yqoameeujwohws:bac0c500849bdd021f07a7c3fd7340220da1531b7733405d6eb5ea4214db1e61@ec2-52-44-50-220.compute-1.amazonaws.com:5432/devu6ihe8a91si"
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:{}@localhost:5432/Biblio".format(motdepasse)
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://yqoameeujwohws:bac0c500849bdd021f07a7c3fd7340220da1531b7733405d6eb5ea4214db1e61@ec2-52-44-50-220.compute-1.amazonaws.com:5432/devu6ihe8a91si"
+#app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:{}@localhost:5432/Biblio".format(motdepasse)
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 db=SQLAlchemy(app)
